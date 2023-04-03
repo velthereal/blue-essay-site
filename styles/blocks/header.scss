@@ -1,0 +1,93 @@
+.header {
+	background-color: $prime-1;
+	filter: drop-shadow(0px 1px 2.5px rgba(0,0,0,0.1));
+	// height: 100px;
+}
+.header .container {
+	display: flex;
+	justify-content: space-between;
+}
+.nav {
+	display: flex;
+	align-items: center;
+}
+// header logo
+.logo {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+.logo-text {
+	@include text(13px,$font2-regular,#fff);
+	line-height: 30px;
+	margin-left: 10px;
+}
+.logo-text img {
+	width: 180px;
+}
+// nav 
+nav ul {
+	display: flex;
+}
+nav ul a {
+	text-decoration: none;
+	text-transform: uppercase;
+	@include text(12px,$font1-semibold,#fff);
+	line-height: 16px;
+	margin-right: 45px;
+	display: flex;
+	position: relative;
+}
+nav ul li:last-of-type a {
+	margin: 0;
+}
+nav ul a:hover {
+	color: #fff;
+}
+nav ul li:nth-of-type(1) a::after, 
+nav ul li:nth-of-type(2) a::after {
+	content: "";
+	align-self: center;
+	position: absolute;
+	right: -15px;
+	display: block;
+	width: 0; 
+	height: 0;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #fff;
+}
+// tel icon
+.sprite-phone-icon {
+	margin-left: 30px;
+	width: 31px;
+	height: 31px;
+	background-position: -5px -628px;
+}
+// buttons
+.header button {
+	@include text(12px,$font1-semibold);
+	@include btn(100px,$prime-2);
+	height: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-left: 12px;
+	&:hover {
+		@extend .btn1-hover;
+	}
+}
+.header button:first-of-type {
+	background-color: $pr-1-dark-1;
+	margin-left: 24px;
+}
+.burger {
+	margin-left: 32px;
+}
+.burger span {
+	display: block;
+	background-color: #fff;
+	height: 3px;
+	width: 22px;
+	margin-bottom: 4px;
+	border-radius: 3px;
+}

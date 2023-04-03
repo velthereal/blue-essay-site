@@ -1,0 +1,556 @@
+.grid {
+	margin: 0 auto;
+	width: 500px;
+	display: grid;
+	grid-template-columns: repeat(4,100px);
+	grid-auto-rows: 100px;
+	gap: 40px;
+	div {
+		border-radius: 50%;
+	}
+	.prime-1 {
+		background-color: $prime-1;
+	}
+	.prime-2 {
+		background-color: $prime-2;
+	}
+	.prime-3 {
+		background-color: $prime-3;
+	}
+	.prime-4 {
+		background-color: $prime-4;
+	}
+	.pr-1-light-1 {
+		background-color: $pr-1-light-1;
+	}
+	.pr-1-light-2 {
+		background-color: $pr-1-light-2;
+	}
+	.pr-1-light-3 {
+		background-color: $pr-1-light-3;
+	}
+	.pr-1-dark-1 {
+		background-color: $pr-1-dark-1;
+	}
+	.pr-1-dark-2 {
+		background-color: $pr-1-dark-2;
+	}
+	.pr-1-dark-3 {
+		background-color: $pr-1-dark-3;
+	}
+	.pr-2-light-1 {
+		background-color: $pr-2-light-1;
+	}
+	.pr-2-light-2 {
+		background-color: $pr-2-light-2;
+	}
+	.pr-2-light-3 {
+		background-color: $pr-2-light-3;
+	}
+	.pr-2-dark-1 {
+		background-color: $pr-2-dark-1;
+	}
+	.pr-2-dark-2 {
+		background-color: $pr-2-dark-2;
+	}
+	.pr-2-dark-3 {
+		background-color: $pr-2-dark-3;
+	}
+	.pr-3-light-1 {
+		background-color: $pr-3-light-1;
+	}
+	.pr-3-light-2 {
+		background-color: $pr-3-light-2;
+	}
+	.pr-3-light-3 {
+		background-color: $pr-3-light-3;
+	}
+	.pr-3-dark-1 {
+		background-color: $pr-3-dark-1;
+	}
+	.pr-3-dark-2 {
+		background-color: $pr-3-dark-2;
+	}
+	.pr-3-dark-3 {
+		background-color: $pr-3-dark-3;
+	}
+	.pr-4-light-1 {
+		background-color: $pr-4-light-1;
+	}
+	.pr-4-light-2 {
+		background-color: $pr-4-light-2;
+	}
+	.pr-4-light-3 {
+		background-color: $pr-4-light-3;
+	}
+	.pr-4-dark-1 {
+		background-color: $pr-4-dark-1;
+	}
+	.pr-4-dark-2 {
+		background-color: $pr-4-dark-2;
+	}
+	.pr-4-dark-3 {
+		background-color: $pr-4-dark-3;
+	}
+}
+// headings
+h1 {
+	@include heading(35px,$pr-4-dark-3,$font1-bold);
+}
+h2 {
+	@include heading(33px,$pr-4-dark-2);
+}
+h3 {
+ //  font-family: 'Poppins Medium' 'Poppins SemiBold';
+	@include heading(27px,$pr-4-dark-3);
+}
+h4 {
+	@include heading(22px,$pr-4-dark-3);
+}
+h5 {
+	@include heading(17px,$pr-4-dark-3);
+}
+h6 {
+	@include heading(15px,$pr-4-dark-3);
+}
+// texts
+p {
+	@include text(14px,$font1-regular);
+}
+.subtitle {
+	@include text(20px,$font1-medium);
+}
+blockquote {
+	@include text(17px,$font1-regular,$pr-1-dark-1);
+	@include background($pr-1-light-3,15px 35px);
+	border-left: solid 2px $prime-1;
+}
+// popup
+.info-popup {
+	@include text(13px,$font1-light);
+	@include background(#ffffff,25px,1px solid $pr-4-light-1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 320px;
+	height: 169px;
+	border-radius: 3px;
+ }
+// lists
+ul{
+	padding: 0;
+ 	list-style-type: none;
+	margin: 0;
+}
+ul.list li {
+	@include text(15px,$font1-medium);
+	position: relative;
+	display: flex;
+	align-items: center;
+	&::after {
+		content: "";
+		display: block;
+		width: 4px;
+		height: 7px;
+		border-bottom: solid 2px #fff;
+		border-right: solid 2px #fff;
+		transform: rotate(45deg);
+		position: absolute;
+		left: -16px;
+		top: 7px;
+	}
+	&::before {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: $prime-1;
+		position: absolute;
+		left: -20px;
+	}
+}
+// input elements
+input[type="text"], .form-select {
+	width: 320px;
+	height: 50px;
+	@include text(13px,$font1-regular,$pr-4-dark-1);
+	@include background($standart-gray,0px,1px solid $pr-4-light-1);
+	box-sizing: border-box;
+	border-radius: 3px;
+	&:hover {
+		background-color: #fff;
+		@extend .hover;
+	}
+}
+input[type="text"] {
+	padding: 20px;
+	&:active {
+		@include background(#fff,20px,1px solid $prime-1,inset 0 0 2.5px $pr-1-light-1);
+	}
+	&:focus-visible {
+		outline: none;
+		@include background(#fff,20px,1px solid $prime-1,inset 0 0 2.5px $pr-1-light-1);
+	}
+}
+.form-select {
+	padding: 0 15px;
+	&:focus {
+		@include background(#fff,0 15px,1px solid $prime-1,inset 0 0 2.5px $pr-1-light-1);
+	}
+}
+// input pages
+.pages {
+  width: 351px;
+  display: flex;
+  @include background( $standart-gray,0px,1px solid $pr-4-light-1);
+  border-radius: 3px;
+}
+.pages input.pages-number{
+  width: 257px;
+  height: 48px;
+  color: $pr-4-dark-1;
+  box-sizing: border-box;
+  text-align: center;
+  @include background(rgba(255,255,255,0),0px);
+	&:focus-visible {
+		outline: none;
+		@include background(rgba(255,255,255,0),0px);
+	}
+	&:active {
+		@include background(rgba(255,255,255,0),0px);
+	}
+}
+.pages button {
+	width: 47px;
+	height: 48px;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: none;
+	font-size: 30px;
+	font-weight: lighter;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pages button:first-of-type {
+	border-right: 1px solid $pr-4-light-1;
+}
+.pages button:last-of-type {
+	border-left: 1px solid $pr-4-light-1;
+}
+// input success and no success
+input.success {
+	border: 1px solid $green;
+	background: url(../../images/check.png) #fff no-repeat;
+	background-position: 290px 20px;
+	&::placeholder {
+		color: $green;
+	}
+	&:disabled {
+		outline: none;
+		@include background(#fff,20px,$green 1px solid);
+	}
+}
+input.no-success {
+	border: 1px solid $prime-2;
+	background: url(../../images/hrest.png) #fff no-repeat;
+	background-position: 290px 20px;
+	&::placeholder {
+	  color: $prime-2;
+   }
+	&:disabled {
+		outline: none;
+		@include background(#fff,20px,$prime-2 1px solid);
+	}
+}
+// input checkbox
+input[type="checkbox"] {
+	background-color: $prime-1;
+}
+input:checked {
+	border: solid 1px $prime-1;
+}
+.check input {
+	display: none;
+} 
+.check label {
+	position: relative;
+}
+.check label::after {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: solid 2px $pr-4-light-1;
+	border-radius: 3px;
+}
+.check input:hover + label::after  {
+	border-color: $prime-1;
+	@extend .hover;
+}
+.check input:checked + label::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 13px;
+	border-bottom: solid 2px #fff;
+	border-right: solid 2px #fff;
+	position: absolute;
+	transform: rotate(45deg);
+	left: 10px;
+	top: 5px;
+}
+.check input:checked + label::after {
+	background-color: $prime-1;
+	border-color: $prime-1;
+}
+.check input:disabled + label::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 13px;
+	border-bottom: solid 2px #fff;
+	border-right: solid 2px #fff;
+	position: absolute;
+	transform: rotate(45deg);
+	left: 10px;
+	top: 5px;
+}
+.check input:disabled + label::after {
+	content: "";
+	background-color: $pr-4-light-1;
+	border-color: $pr-4-light-1;
+}
+// input radio
+input[type="radio"] {
+	background-color: $prime-1;
+}
+.radio input {
+	display: none;
+} 
+.radio label {
+	position: relative;
+}
+.radio label::after {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: solid 2px $pr-4-light-1;
+	border-radius: 13px;
+}
+.radio input:hover + label::after  {
+	border-color: $prime-1;
+	@extend .hover;
+}
+.radio input:checked + label::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 8px;
+	background-color: $prime-1;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+.radio input:checked + label::after {
+	border-color: $prime-1;
+}
+.radio input:disabled + label::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 8px;
+	background-color:$pr-4-light-1;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+.radio input:disabled + label::after {
+	content: "";
+	border-color: $pr-4-light-1;
+}
+// buttons
+.btn1 {
+	@include btn(220px,$prime-2); 
+	text-transform: uppercase;
+	&:hover {
+	  @extend .btn1-hover;
+	  @extend .hover;
+	}
+}
+.btn2 {
+	@include btn(280px,$prime-1);
+	&:hover {
+		@extend .btn23-hover;
+		@extend .hover;
+	}
+}
+.btn3 {
+	@include btn(201px,$prime-1);
+	&:hover {
+		@extend .btn23-hover;
+		@extend .hover;
+	}
+}
+.btn4 {
+	@include btn(220px,#fff,$prime-2,1px solid $prime-2);
+	text-transform: uppercase;
+	&:hover {
+		@extend .btn4-hover;
+		@extend .hover;
+	}
+}
+.btn5 {
+	@include btn(201px,#fff,$prime-1,1px solid $prime-1);
+	&:hover {
+		@extend .btn5-hover;
+		@extend .hover;
+	}
+}
+button:disabled {
+	@extend .disabled;
+}
+.btn1-2 {
+	@include btn2(150px,$prime-2);
+	text-transform: uppercase;
+	&:hover {
+		@extend .btn1-hover;
+		@extend .hover;
+	}
+}
+.btn2-2 {
+	@include btn2(170px,$prime-1);
+	&:hover {
+		@extend .btn23-hover;
+		@extend .hover;
+	}
+}
+.btn3-2 {
+	@include btn2(150px,$prime-1);
+	&:hover {
+	  @extend .btn23-hover;
+	  @extend .hover;
+	}
+}
+.btn4-2 {
+	@include btn2(150px,#fff,$prime-2,1px solid $prime-2);
+	&:hover {
+	  @extend .btn4-hover;
+	  @extend .hover;
+	}
+}
+.btn5-2 {
+	@include btn2(150px,#fff,$prime-1,1px solid $prime-1);
+	&:hover {
+	  @extend .btn5-hover;
+	  @extend .hover;
+	}
+}
+// tabs
+.tab {
+	display: flex;
+	height: 60px;
+	border-bottom: solid 2px $pr-4-light-3;
+	box-sizing: border-box;
+}
+.tab button {
+	@include text(14px,$font1-regular,$pr-4-light-1);
+	position: relative;
+	bottom: -2px;
+	@include background(inherit,14px 16px);
+	outline: none;
+	cursor: pointer;
+}
+.tab button.active {
+	border-bottom: 2px solid $prime-2;
+	color: $prime-2;
+	font-family: $font1-medium;
+}
+.tabcontent {
+	@include text(15px,$font1-regular);
+	display: none;
+	padding: 35px 0;
+}
+// pagination
+.pagination {
+	display: flex;
+}
+.pagination a {
+	margin: 2px;
+	display: inline-block;
+	font-size: 13px;
+	color: $pr-4-light-1;
+	text-decoration: none;
+	padding: 2px 9.5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 13px;
+}
+.pagination a.active {
+	background-color: $prime-1;
+	width: 25px;
+	height: 25px;
+	border-radius: 13px;
+	color: #fff;
+}
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+}
+.dots span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: $pr-4-light-1;
+}
+.dots span.active {
+	background-color: rgba(19,174,255,0);
+	border: 2px solid $prime-1;
+}
+.social a {
+	font-size: 15px;
+	color: $pr-4-light-1;
+	text-decoration: none;
+	margin-right: 30px;
+}
+.social a:nth-of-type(1):hover {
+	color: #3b5999;
+	@extend .hover;
+}
+.social a:nth-of-type(2):hover {
+	color: #55acef ;
+	@extend .hover;
+}
+.social a:nth-of-type(3):hover {
+	color: #bd081b;
+	@extend .hover;
+}
+.social a:nth-of-type(4):hover {
+	color: #de4b39;
+	@extend .hover;
+}
+.bg-social a {
+	font-size: 15px;
+	color: #fff;
+	text-decoration: none;
+	margin-right: 15px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: $prime-1;
+	border: 1px solid #fff;
+	box-sizing: border-box;
+}
+.bg-social a:hover {
+	background-color: $pr-1-dark-1;
+	border: none;
+}

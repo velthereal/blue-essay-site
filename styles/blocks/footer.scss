@@ -1,0 +1,79 @@
+.footer {
+	background-color: $prime-1;
+	padding-bottom: 25px;
+}
+.top-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-footer ul {
+	display: flex;
+}
+.top-footer ul a {
+	@include text(12px,$font1-medium,#fff);
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-left: 30px;
+}
+.footer section {
+	margin-bottom: 40px;
+	margin-top: 25px;
+	padding: 50px 0;
+	display: flex;
+	justify-content: space-between;
+	border-top: solid 1px rgba(255, 255, 255, 0.502);
+	border-bottom: solid 1px rgba(255, 255, 255, 0.502);
+}
+.footer section  h5 {
+	@include heading(16px,#fff);
+	margin-bottom: 30px;
+}
+.footer section  ul {
+	@include text(13px,$font1-regular,#fff);
+	line-height: 30px;
+}
+.bottom-footer {
+	display: flex;
+	justify-content: space-between;
+}
+.bottom-footer p:first-of-type {
+	@include text(13px,$font1-regular,#fff);
+	line-height: 21px;
+}
+.footer-tel, 
+.footer-email {
+	display: flex;
+	position: relative;
+}
+.footer-tel p, 
+.footer-email p {
+	@include text(13px,$font1-medium,#fff);
+	margin-left: 20px;
+	line-height: 16px;
+}
+.footer-tel a, 
+.footer-email a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 16px;
+	margin-top: 5px;
+}
+.sprite-massege {
+	width: 31px;
+	height: 31px;
+	background-position: -5px -587px;
+}
+.sprite-tel {
+	width: 31px;
+	height: 31px;
+	background-position: -5px -669px;
+}
+.footer-tel .sprite, 
+.footer-email .sprite {
+	position: absolute;
+	left: -30px;
+	top: 5px;
+}

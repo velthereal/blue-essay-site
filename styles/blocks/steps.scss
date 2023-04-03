@@ -1,0 +1,81 @@
+.steps {
+	text-align: center;
+}
+.steps h6 {
+	@include text(15px,$font1-regular,$pr-1-dark-1);
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+.istruction {
+	margin-top: 60px;
+	display: grid;
+	grid-template-columns: repeat(4,200px);
+	justify-content: space-around;
+	grid-column-gap: 40px;
+}
+.step div {
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+.step h5 {
+	margin-bottom: 20px;
+}
+.step {
+	position: relative;
+}
+.sprite-icon2-1 {
+	width: 61px;
+	height: 61px;
+	background-position: -5px -202px;
+}
+
+.sprite-icon2-2 {
+	width: 51px;
+	height: 64px;
+	background-position: -5px -273px;
+}
+
+.sprite-icon2-3 {
+	width: 60px;
+	height: 60px;
+	background-position: -5px -347px;
+}
+
+.sprite-icon2-4 {
+	width: 62px;
+	height: 62px;
+	background-position: -5px -417px;
+}
+.spans {
+	height: 160px;
+	position: absolute;
+	top: 30px;
+	right: -40px;
+}
+.step span:first-of-type, 
+.step span:last-of-type {
+	position: absolute;
+	display: block;
+	width: 2px;
+	height: 60px;
+	background-color: $pr-1-light-2;
+}
+.step span:first-of-type {
+	top: 0;
+}
+.step span:nth-of-type(2) {
+	position: absolute;
+	left: -14px;
+	top: 65px;
+	display: block;
+	width: 29px;
+	height: 29px;
+	border-top: 2px solid $pr-1-light-2;
+	border-right: 2px solid $pr-1-light-2;
+	transform: rotate(45deg);
+}
+.step span:last-of-type {
+	bottom: 0;
+	height: 61px;
+}

@@ -1,0 +1,19 @@
+.welcome .container {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	margin-top: 90px;
+}
+.welcome h1 {
+	margin: 40px 0;
+}
+.welcome-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $pr-1-light-3;
+	width: 515px;
+	height: 415px;
+}
+.welcome h6 {
+	@include text(15px,$font1-regular,$pr-1-dark-1);
+}

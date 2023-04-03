@@ -1,0 +1,23 @@
+@import "help/help.scss";
+@import "blocks/header.scss";
+@import "blocks/bunner.scss";
+@import "blocks/welcome.scss";
+@import "blocks/adventages.scss";
+@import "blocks/steps.scss";
+@import "blocks/discounts.scss";
+@import "blocks/reviews.scss";
+@import "blocks/footer.scss";
+
+.container {
+	padding: 15px;
+}
+@media screen and (min-width: 1170px) {
+	.container {
+		width: 1170px;
+	}
+}
+.sprite {
+	background-image: url(../images/spritesheet.png);
+	background-repeat: no-repeat;
+	display: block;
+}

@@ -1,0 +1,58 @@
+.reviews {
+	margin-top: 300px;
+}
+.reviews .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.reviews article {
+	text-align: center;
+	margin-top: 30px;
+}
+.reviews h6 {
+	color: $pr-1-dark-1;
+	margin-bottom: 25px;
+}
+.reviews img {
+	margin-bottom: 30px;
+}
+.reviews p {
+	width: 612px;
+}
+.reviews h5 {
+	font-family: $font1-semibold;
+	color: $pr-1-dark-1;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.reviews p:last-of-type {
+	@include text(13px,$font1-light,$pr-4-light-1);
+}
+.reviews div {
+	position: relative;
+}
+.reviews article::before {
+	content: "";
+	position: absolute;
+	top: 100px;
+	left: -235px;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-bottom: solid 2px $prime-1;
+	border-left: solid 2px $prime-1;
+	transform: rotate(45deg);
+}
+.reviews article::after {
+	content: "";
+	position: absolute;
+	top: 100px;
+	right: -235px;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-bottom: solid 2px $prime-1;
+	border-left: solid 2px $prime-1;
+	transform: rotate(-135deg);
+}

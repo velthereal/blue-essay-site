@@ -1,0 +1,70 @@
+.bunner {
+	background: url(../../images/bg1-city.png) $pr-1-light-3 no-repeat center;
+	height: 630px;
+	background-size: cover;
+}
+.bunner .container {
+	display: flex;
+}
+// text
+.bunner h1 {
+	@include heading(47px,$pr-4-dark-3,$font1-bold);
+	margin-bottom: 30px;
+	margin-top: 100px;
+}
+.bunner h1 span {
+	@include heading(47px,$prime-1,$font1-bold);
+}
+.bunner p {
+	@include text(20px,$font1-regular,$prime-4);
+	width: 545px;//557px;
+	line-height: 30px;
+	border-top: solid 1px $pr-4-light-1;
+	position: relative;
+	padding-top: 42px;
+	padding-bottom: 30px;
+}
+.p-span {
+	position: absolute;
+	top: -3px;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background-color: #f75d2d;
+}
+.bunner img {
+	position: relative;
+	z-index: 10;
+	margin-top: 85px;
+}
+// form
+.form {
+	position: relative;
+	top: -30px;
+	margin: 0 auto;
+	width: 1200px;
+	height: 135px;
+	background-color: $prime-1;
+	display: flex;
+	align-items: center;
+	filter: drop-shadow(0px 4px 15px rgba(202,202,202,0.15));
+}
+.form form {
+	width: inherit;
+	display: flex;
+	justify-content: space-around;
+}
+.form label {
+	@include text(13px,$font1-medium,#fff);
+	margin-bottom: 10px;
+}
+.form .form-select, .form .pages {
+	width: 200px;
+}
+.form .pages input {
+	width: 105px;
+}
+.btn-cont {
+	@include btn(200px,$pr-1-dark-1);
+	align-self: flex-end;
+}
