@@ -135,3 +135,43 @@
 	top: -15px;
 	right: -10px;
 }
+.for-mobile {
+	display: none;
+}
+@media screen and (max-width: 768px){
+	.sales {
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.bg-color {
+		display: none;
+	}
+}
+@media screen and (max-width: 320px){
+	.discounts h2 {
+		font-size: 24px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.discounts .subtitle {
+		font-size: 14px;
+		width: 253px;
+	}
+	.white {
+		display: none;
+	}
+	.for-mobile {
+		display: flex;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $font1-regular;
+		align-items: center;
+		justify-content: center;
+	}
+	.discounts {
+		margin-top: 40px;
+		padding-top: 40px;
+		height: 400px;
+	}
+}

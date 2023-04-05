@@ -13,7 +13,7 @@
 	margin-top: 100px;
 }
 .bunner h1 span {
-	@include heading(47px,$prime-1,$font1-bold);
+	color: $prime-1;
 }
 .bunner p {
 	@include text(20px,$font1-regular,$prime-4);
@@ -39,11 +39,12 @@
 }
 // form
 .form {
+	padding: 20px;
 	position: relative;
 	top: -30px;
 	margin: 0 auto;
-	width: 1200px;
-	height: 135px;
+	// width: 1200px;
+	// height: 135px;
 	background-color: $prime-1;
 	display: flex;
 	align-items: center;
@@ -53,6 +54,7 @@
 	width: inherit;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap
 }
 .form label {
 	@include text(13px,$font1-medium,#fff);
@@ -65,6 +67,51 @@
 	width: 105px;
 }
 .btn-cont {
+	margin-top: 30px;
 	@include btn(200px,$pr-1-dark-1);
 	align-self: flex-end;
+}
+@media screen and (min-width: 1170px) {
+	.form {
+		width: 1200px;
+		height: 135px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.bunner h1 {
+		margin-top: 50px;
+	}
+	.bunner img  {
+		display: none;
+	}
+	.form {
+		top: 0px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.bunner {
+		text-align: center;
+	}
+	.bunner h1 {
+		@include heading(18px,$pr-4-dark-3,$font1-bold);
+		margin-bottom: 30px;
+		margin-top: 20px;
+		text-align: left;
+	}
+	.bunner p {
+		@include text(12px,$font1-regular,$prime-4);
+		width: 245px;
+		line-height: 15px;
+		border-top: solid 1px $pr-4-light-1;
+		position: relative;
+		padding-top: 22px;
+		padding-bottom: 15px;
+	}
+	.bunner .btn1 {
+		@include btn2(150px,$prime-2);
+		font-size: 14px;
+	}
+	.form {
+		padding: 10px;
+	}
 }

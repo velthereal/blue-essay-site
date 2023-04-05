@@ -3,6 +3,9 @@
 	grid-template-columns: repeat(2,1fr);
 	margin-top: 90px;
 }
+.h6 {
+	display: none;
+}
 .welcome h1 {
 	margin: 40px 0;
 }
@@ -16,4 +19,88 @@
 }
 .welcome h6 {
 	@include text(15px,$font1-regular,$pr-1-dark-1);
+}
+@media screen and (max-width: 1170px) {
+	.welcome-img {
+		width: 515px;
+		height: 415px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.welcome .container {
+		margin-top: 150px;
+	}
+	.welcome-img {
+		width: 415px;
+		height: 315px;
+	}
+	.welcome-img img {
+		display: block;
+		width: 250px;
+	}
+}
+@media screen and (max-width: 860px) {
+	.welcome .container {
+		margin-top: 120px;
+		grid-template-columns: 1fr;
+	}
+	.welcome-img {
+		width: 415px;
+		height: 315px;
+		justify-self: center;
+	}
+	.welcome-img img {
+		display: block;
+		width: 250px;
+	}
+	.welcome .container article h6 {
+		display: none;
+	}
+	.h6 {
+		display: block;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.welcome .container {
+		margin-top: 120px;
+		grid-template-columns: 1fr;
+	}
+	.welcome-img {
+		width: 415px;
+		height: 315px;
+		justify-self: center;
+	}
+	.welcome-img img {
+		display: block;
+		width: 250px;
+	}
+	.welcome .container article h6 {
+		display: none;
+	}
+	.h6 {
+		display: block;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.welcome .container {
+		margin-top: 120px;
+		grid-template-columns: 1fr;
+	}
+	.welcome-img {
+		width: 265px;
+		height: 165px;
+		justify-self: center;
+	}
+	.welcome-img img {
+		display: block;
+		width: 120px;
+	}
+	.welcome h1 {
+		margin: 30px 0;
+		font-size: 24px;
+	}
 }

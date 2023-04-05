@@ -56,3 +56,63 @@
 	border-left: solid 2px $prime-1;
 	transform: rotate(-135deg);
 }
+@media screen and (max-width: 1024px){
+	.reviews article::before {
+		top: 100px;
+		left: -135px;
+	}
+	.reviews article::after {
+		top: 100px;
+		right: -135px;
+	}
+}
+@media screen and (max-width: 768px){
+	.reviews {
+		margin-top: 250px;
+	}
+	.reviews article::before {
+		width: 25px;
+		height: 25px;
+		top: 100px;
+		left: -45px;
+	}
+	.reviews article::after {
+		width: 25px;
+		height: 25px;
+		top: 100px;
+		right: -45px;
+	}
+}
+@media screen and (max-width: 320px){
+	.reviews {
+		margin-top: 20px;
+		text-align: center;
+	}
+	.reviews h2 {
+		font-size: 20px;
+	}
+	.reviews p {
+		width: 300px;
+	}
+	.reviews h5 {
+		font-family: $font1-semibold;
+		color: $pr-1-dark-1;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.reviews p:last-of-type {
+		@include text(13px,$font1-light,$pr-4-light-1);
+	}
+	.reviews article::before {
+		width: 15px;
+		height: 15px;
+		top: 50px;
+		left: 0px;
+	}
+	.reviews article::after {
+		width: 15px;
+		height: 15px;
+		top: 50px;
+		right: 0px;
+	}
+}

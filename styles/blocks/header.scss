@@ -91,3 +91,27 @@ nav ul li:nth-of-type(2) a::after {
 	margin-bottom: 4px;
 	border-radius: 3px;
 }
+@media screen and (max-width: 1170px) {
+	.nav nav {
+		display: none;
+	}
+}
+@media screen and (max-width: 320px) {
+	.logo img {
+		width: 40px;
+	}
+	.logo-text {
+		@include text(10px,$font2-regular,#fff);
+		line-height: 15px;
+		margin-left: 5px;
+	}
+	.logo-text img {
+		width: 100px;
+	}
+	.header button {
+		display: none;
+	}
+	.header .sprite {
+		display: none;
+	}
+}
