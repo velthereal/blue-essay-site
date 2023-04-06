@@ -38,6 +38,10 @@
 		display: block;
 		width: 250px;
 	}
+	.welcome h1 {
+		font-size: 24px;
+		margin: 15px 0px;
+	}
 }
 @media screen and (max-width: 860px) {
 	.welcome .container {
@@ -87,7 +91,7 @@
 }
 @media screen and (max-width: 320px) {
 	.welcome .container {
-		margin-top: 120px;
+		margin-top: 100px;
 		grid-template-columns: 1fr;
 	}
 	.welcome-img {
@@ -100,7 +104,7 @@
 		width: 120px;
 	}
 	.welcome h1 {
-		margin: 30px 0;
-		font-size: 24px;
+		margin: 20px 0;
+		font-size: 20px;
 	}
 }

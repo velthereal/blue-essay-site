@@ -63,10 +63,16 @@
 		grid-template-columns: repeat(2,1fr);
 		grid-row-gap: 30px;
 		justify-items: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 	.adventages-artcl article:last-of-type {
 		justify-self: center;
 		grid-column: span 2;
+	}
+	.adventages h6{
+		margin-top: 20px;
+		margin-bottom: 15px;
 	}
 }
 @media screen and (max-width: 860px) {
@@ -97,6 +103,7 @@
 }
 @media screen and (max-width: 320px) {
 	.adventages-artcl {
+		grid-row-gap: 0px;
 		margin-left: 0px;
 		display: flex;
 		flex-direction: column;
@@ -104,7 +111,7 @@
 		margin-top: 0px;
 	}
 	.adventages h2 {
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.adventages-artcl article {
 		width: 280px;

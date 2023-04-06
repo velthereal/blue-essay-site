@@ -138,16 +138,28 @@
 .for-mobile {
 	display: none;
 }
+@media screen and (max-width: 1024px){
+	.discounts {
+		padding-top: 35px;
+	}
+	.sales {
+		margin-top: 30px;
+	}
+}
 @media screen and (max-width: 768px){
 	.sales {
 		justify-content: center;
 		margin-top: 20px;
+		width: 555px;
 	}
 	.bg-color {
 		display: none;
 	}
 }
 @media screen and (max-width: 320px){
+	.sales {
+		width: 280px;
+	}
 	.discounts h2 {
 		font-size: 24px;
 		text-align: center;

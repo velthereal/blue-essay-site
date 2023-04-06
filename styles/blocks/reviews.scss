@@ -57,6 +57,9 @@
 	transform: rotate(-135deg);
 }
 @media screen and (max-width: 1024px){
+	.reviews {
+		margin-top: 225px;
+	}
 	.reviews article::before {
 		top: 100px;
 		left: -135px;
